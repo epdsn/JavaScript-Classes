@@ -48,28 +48,46 @@ employeesList.innerHTML += "<li>" + e4.getName() + "</li>";
 // Create a polygon with side lengths 3, 4, and 5
 // let triangle = new Polygon([3, 4, 5]);
 
+
+// Star coding here:
 class Polygon {
-    // Star coding here:
 
-    constructor() {
-
+    constructor(polyArray) {
+        this.polyArray = polyArray;
     }
 
     perimeter() {
-        return "not impliented";
+        let perimeter = 0;
+        for (let i in this.polyArray) {
+            perimeter += this.polyArray[i];
+        }
+        return perimeter;
     }
 
-    // End coding
+
 }
-
+// End coding
 // do not modify below;
-
 if (Polygon) {
     const rectangle = new Polygon([10, 20, 10, 20]);
     const square = new Polygon([10, 10, 10, 10]);
     const pentagon = new Polygon([10, 20, 30, 40, 43]);
 
+    let polygons = [rectangle, square, pentagon];
+    let polyList = document.getElementById("polygons");
+
     console.log(rectangle.perimeter());
     console.log(square.perimeter());
     console.log(pentagon.perimeter());
+
+    for (let p in polygons) {
+        let polyOrder = parseInt(p) + 1;
+        polyList.innerHTML += "<li>polygon has " + polyOrder + " a perimeter of " + polygons[p].perimeter() + "</li>";
+    }
+
+
 }
+// expected output:
+//60
+//40
+//143
