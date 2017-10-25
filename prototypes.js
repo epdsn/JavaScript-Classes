@@ -36,3 +36,40 @@ var e4 = new EmployeeType2("Billy (prototyped object)");
 
 employeesList.innerHTML += "<li>" + e3.getName() + "</li>";
 employeesList.innerHTML += "<li>" + e4.getName() + "</li>";
+
+
+
+//  Assignment:
+//  Create a Polygon class that has the following properties:
+//  1. A constructor that takes an array of integer values describing the lengths of the polygon's sides.
+//  2. A perimeter() method that returns the polygon's perimeter.
+
+// example: 
+// Create a polygon with side lengths 3, 4, and 5
+// let triangle = new Polygon([3, 4, 5]);
+
+class Polygon {
+    // Star coding here:
+
+    constructor() {
+
+    }
+
+    perimeter() {
+        return "not impliented";
+    }
+
+    // End coding
+}
+
+// do not modify below;
+
+if (Polygon) {
+    const rectangle = new Polygon([10, 20, 10, 20]);
+    const square = new Polygon([10, 10, 10, 10]);
+    const pentagon = new Polygon([10, 20, 30, 40, 43]);
+
+    console.log(rectangle.perimeter());
+    console.log(square.perimeter());
+    console.log(pentagon.perimeter());
+}
